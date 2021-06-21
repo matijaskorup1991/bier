@@ -1,3 +1,21 @@
 .home {
-  padding: 8vh 2rem 10vh 2rem;
+  padding: 8vh 4rem 10vh 4rem;
+}
+
+.home-component {
+  padding-bottom: 15vh;
+  img {
+    display: block;
+    width: 100%;
+  }
+  a {
+    display: block;
+    font-size: 4rem;
+    background-color: #ffca41;
+    color: white;
+    padding: 1rem;
+  }
+  p {
+    font-size: 3rem;
+  }
 }
