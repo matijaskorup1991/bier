@@ -1,0 +1,32 @@
+.beer {
+  padding: 15vh 3rem;
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60vh;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    color: #ffca41;
+    font-size: 2.3rem;
+  }
+  p {
+    color: #333333;
+  }
+  span {
+    display: inline-block;
+
+    margin-left: 80%;
+  }
+
+  button {
+    background-color: #ffca41;
+    border-radius: 50%;
+    padding: 1.5rem;
+    cursor: pointer;
+  }
+}

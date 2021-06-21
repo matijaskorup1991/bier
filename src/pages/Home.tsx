@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import allBeers from '../assets/img/christin.svg';
 import proriat from '../assets/img/proriat.svg';
 import { Link } from 'react-router-dom';
@@ -22,6 +23,28 @@ const HomeComponent: React.FC<Data> = ({ imgSrc, linkTo, linkText, text }) => {
 };
 
 const Home: React.FC = () => {
+  const [beer, setBeer] = useState<any>(null);
+
+  useEffect(() => {
+    async function getBeer() {
+      try {
+        let { data } = await axios.get(
+          'https://ih-beers-api2.herokuapp.com/beers'
+        );
+
+        let filteredData = data.map((el: any) => el._id);
+        setBeer(filteredData);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getBeer();
+  }, []);
+
+  function randomBeer(): string {
+    return beer[Math.floor(Math.random() * beer.length)];
+  }
+
   return (
     <div className='home'>
       <HomeComponent
@@ -32,11 +55,10 @@ const Home: React.FC = () => {
       />
       <HomeComponent
         imgSrc={proriat}
-        linkTo='/randombeer'
+        linkTo={beer ? `/beer/${randomBeer()}` : '/'}
         linkText='Random Beer'
         text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, a, eleifend vitae varius venenatis. '
       />
-      {/* <HomeComponent /> */}
     </div>
   );
 };
