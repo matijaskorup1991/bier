@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { RouteComponentProps, useParams } from 'react-router-dom';
+import back from '../assets/img/Vector.svg';
 import axios from 'axios';
 import './Beer.scss';
 
@@ -17,6 +17,7 @@ interface Data {
   contributed_by: string;
   attenuation_level: number;
   description: string;
+  faArrowLeft: any;
 }
 const Beer = ({ match, history }: { match: Props; history: Props }) => {
   let [beer, setBeer] = useState<any>(null);
@@ -50,7 +51,9 @@ const Beer = ({ match, history }: { match: Props; history: Props }) => {
             Attenuation level: <span>{el.attenuation_level}</span>
           </p>
           <h3>{el.description}</h3>
-          <button onClick={() => history.goBack()}>Back</button>
+          <button onClick={() => history.goBack()}>
+            <img src={back} alt='Back' />
+          </button>
         </React.Fragment>
       );
     });

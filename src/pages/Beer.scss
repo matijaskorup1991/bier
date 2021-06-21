@@ -26,7 +26,12 @@
   button {
     background-color: #ffca41;
     border-radius: 50%;
-    padding: 1.5rem;
+    padding: 1rem;
     cursor: pointer;
+    border: none;
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 }
