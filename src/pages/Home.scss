@@ -19,3 +19,25 @@
     font-size: 3rem;
   }
 }
+
+@media (max-width: 992px) {
+  .home {
+    a {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    a {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+}
