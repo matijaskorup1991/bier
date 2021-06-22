@@ -33,8 +33,7 @@ const Beer = ({ match, history }: { match: Props; history: Props }) => {
       }
     }
     getBeer();
-  }, []);
-  console.log(beer);
+  }, [match.params.id]);
 
   let beerData =
     beer &&

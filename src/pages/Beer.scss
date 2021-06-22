@@ -16,11 +16,8 @@
   }
   p {
     color: #333333;
-  }
-  span {
-    display: inline-block;
-
-    margin-left: 80%;
+    display: flex;
+    justify-content: space-between;
   }
 
   button {
@@ -32,6 +29,18 @@
     img {
       width: 2rem;
       height: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .beer {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      color: #ffca41;
+      font-size: 1.8rem;
     }
   }
 }
