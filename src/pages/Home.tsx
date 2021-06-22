@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import allBeers from '../assets/img/christin.svg';
-import proriat from '../assets/img/proriat.svg';
+import allBeers from '../assets/img/home1.png';
+import proriat from '../assets/img/home2.png';
 import { Link } from 'react-router-dom';
 import './Home.scss';
 
