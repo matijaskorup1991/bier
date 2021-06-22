@@ -31,7 +31,7 @@ const AllBeers: React.FC = () => {
     }
     getBeer();
   }, []);
-  console.log(beer);
+
   return (
     <div className='all-beers'>
       {beer &&
